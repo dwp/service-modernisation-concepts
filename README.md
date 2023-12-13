@@ -1,55 +1,56 @@
-# Service Modernisation- Future State Design for 'Get Financial Support'
+# GOV.UK Prototype Kit
 
-## Previous work
-
-Previous work has been carried out and identified several common needs consistent with the benefit lines that provide financial support as their primary service offer. 
-
-The previous work was explored through the [Service Strategy Prototype](https://github.com/dwp/service-strategy-prototype), including eligibility checker for multiple benefits and wayfinding on GOV.UK.
-
-## Current Work
-
-The teams scope is within the Service Modernisation Programme, a Programme that sits within the Government Major Projects Portfolio (GMPP), and reported through the [Infrastructure and Projects Authority (IPA)](https://assets.publishing.service.gov.uk/media/64c91eaed8b1a71e86b05df3/IPA-Annual-report-2022-2023.pdf.pdf)
-
-### Benefits in Scope
-* Attendance Allowance (AA)
-* Access to Work (AtW)
-* Bereavement Support Payment (BSP)
-* Carers Allowance (CA)
-* Child Maintenance Payments (CM)
-* Cold Weather Payments
-* Disability Living Allowance - Child (DLAc)
-* Funeral Expenses Payment (FeP)
-* Maternity Allowance (MA)
-* Pension Credit (PC)
-* State Pension (SP)
-* Winter Fuel Payment
-
-### Enabling services in Scope
-* Customer View
-* Colleague View
-* Online Identity Validation (OIDV)
-* Telephony Identity Validation (TIDV)
-* Conversational Platform
-* Paper, print and whitemail 
-
-> #### 9 of these benefit lines are listed as part of the [CDDO's 'Top 75 Services'](https://www.gov.uk/government/publications/roadmap-for-digital-and-data-2022-to-2025/transforming-for-a-digital-future-2022-to-2025-roadmap-for-digital-and-data#annex-top-75-services) and commitment to 'great' by 2025.
-> 
-> 38. Apply for and manage Pension Credit
-> 40. Apply for Bereavement Support Payment
-> 41. Claim Access To Work
-> 42. Claim Attendance Allowance
-> 43. Claim Carer’s Allowance
-> 45. Claim Funeral Expenses
-> 47. Claim Maternity Allowance
-> 48. Get your State Pension
-> 49. Manage your Child Maintenance case online
+This is the latest version of the GOVUK Prototype Kit. An automated job runs every time a change is made to the main branch to push to Heroku. Make sure you edit the .github/workflows/deploy.yml file from any prototypes you create from this template. You need to edit line 16 in that file, replacing blank-prototype1 with the name of your Heroku app.
 
 
-## MVP and scaling
-Looking at the end-to-end of 3 benefits and if it is possible to create common data, processes and a service delivery model, and ultimately see if this is scalable.
-* [Attendance Allowance](https://www.gov.uk/attendance-allowance)
-* [Carers Allowance](https://www.gov.uk/carers-allowance)
-* [Disability Living Allowance - Child](https://www.gov.uk/disability-living-allowance-children)
+Go to the [GOV.UK Prototype Kit site](https://prototype-kit.service.gov.uk/docs) to get the latest documentation.
 
-### OP1 Journey is the first MVP based on a basic flow for someone to sign in and update their circumstances to enter a carehome.
-The planning session was done on mural found here - https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1718808059422/8a846f76b369314893dc3d579a264928ce51e203?sender=u56ae539905332ae77cee2194
+## About the Prototype Kit
+
+The Prototype Kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
+
+Read the [project principles](https://prototype-kit.service.gov.uk/docs/principles).
+
+## Make sure prototypes are password-protected
+
+If you publish your prototypes online, they **must** be [protected by a password](https://prototype-kit.service.gov.uk/docs/publishing). This is to prevent members of the public finding prototypes and thinking they are real services.
+
+You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like GOV.UK, but do not have the same security provisions. Always make sure you are handling user data appropriately.
+
+## Installation instructions
+
+- [Installation guide for new users (non technical)](https://prototype-kit.service.gov.uk/docs/install/getting-started)
+- [Installation guide for developers (technical)](https://prototype-kit.service.gov.uk/docs/install/getting-started-advanced)
+
+## Node version requirements
+
+We always recommend you use the [current long term support (LTS) version of Node.js](https://github.com/nodejs/release#release-schedule).
+
+The Prototype Kit always supports at least the current and previous LTS releases.
+
+## Support
+
+The GOV.UK Prototype Kit is maintained by the Government Digital Service. If you’ve got a question or need support you can:
+
+* email [govuk-design-system-support@digital.cabinet-office.gov.uk](mailto:govuk-design-system-support@digital.cabinet-office.gov.uk)
+* [get in touch on Slack](https://ukgovernmentdigital.slack.com/app_redirect?channel=prototype-kit)
+* [view known issues on GitHub](https://github.com/alphagov/govuk-prototype-kit/issues)
+
+## Contributing
+
+If you’ve got an idea or suggestion, you can:
+
+* [get in touch on the developer Slack channel](https://ukgovernmentdigital.slack.com/app_redirect?channel=prototype-kit-dev)
+* [create a GitHub issue](https://github.com/alphagov/govuk-prototype-kit/issues)
+
+The govuk-prototype-kit repository is public and we welcome contributions from anyone.
+
+Contributors to alphagov repositories are expected to follow the [Contributor Covenant Code of Conduct](https://github.com/alphagov/.github/blob/main/CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct). Contributors working within government are also expected to follow the [Civil Service code](https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code).
+
+We are unable to monitor activity on this repository outside of our office hours (10am to 4pm, UK time). To get a faster response at other times, you can [report abuse or spam to GitHub](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam).
+
+### Security
+
+GDS is an advocate of responsible vulnerability disclosure. If you’ve found a vulnerability, we would like to know so we can fix it.
+
+For full details on how to tell us about vulnerabilities, [see our security policy](https://github.com/alphagov/govuk-prototype-kit/security/policy).
