@@ -1,4 +1,4 @@
-# Service Modernisation- Future State Design for 'Get Finacial Support'
+# Service Modernisation- Future State Design for 'Get Financial Support'
 
 ## Previous work
 
