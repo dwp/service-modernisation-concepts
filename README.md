@@ -43,3 +43,11 @@ The teams scope is within the Service Modernisation Programme, a Programme that 
 > 47. Claim Maternity Allowance
 > 48. Get your State Pension
 > 49. Manage your Child Maintenance case online
+
+
+## MVP and scaling
+Looking at the end-to-end of 3 benefits and if it is possible to create common data, processes and a service delivery model, and ultimately see if this is scalable.
+* [Attendance Allowance](https://www.gov.uk/attendance-allowance)
+* [Carers Allowance](https://www.gov.uk/carers-allowance)
+* [Disability Living Allowance - Child](https://www.gov.uk/disability-living-allowance-children)
+
