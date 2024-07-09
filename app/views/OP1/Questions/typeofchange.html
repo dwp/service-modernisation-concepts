@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/op1/questions/move-date" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "What type of change do you want to report?",
+          fieldset: {
+            legend: {
+              text: "What type of change do you want to report?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "The person I am caring for has temporarily moved in to a care home",
+              text: "The person I am caring for has temporarily moved in to a care home"
+            },
+            {
+              value: "The person I am caring for is in hospital",
+              text: "The person I am caring for is in hospital"
+            },
+            {
+              value: "The person I am caring for has moved in to a care home permanently ",
+              text: "The person I am caring for has moved in to a care home permanently "
+            },
+            {
+              value: "I have a new caring responsibility",
+              text: "I have a new caring responsibility"
+            },
+            {
+              value: "I no longer have caring responsibilities",
+              text: "I no longer have caring responsibilities"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

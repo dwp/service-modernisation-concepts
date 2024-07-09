@@ -51,3 +51,5 @@ Looking at the end-to-end of 3 benefits and if it is possible to create common d
 * [Carers Allowance](https://www.gov.uk/carers-allowance)
 * [Disability Living Allowance - Child](https://www.gov.uk/disability-living-allowance-children)
 
+### OP1 Journey is the first MVP based on a basic flow for someone to sign in and update their circumstances to enter a carehome.
+The planning session was done on mural found here - https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1718808059422/8a846f76b369314893dc3d579a264928ce51e203?sender=u56ae539905332ae77cee2194

@@ -1,7 +1,7 @@
 <html lang="en" class="govuk-template"><head>
   <meta charset="utf-8">
   <title>
-Create a GOV.UK One Login or sign in - GOV.UK One Login
+Enter your email address - GOV.UK One Login
 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0b0c0c">
@@ -12,8 +12,10 @@ Create a GOV.UK One Login or sign in - GOV.UK One Login
     <link rel="mask-icon" href="/plugin-assets/govuk-frontend/dist/govuk/assets/images/govuk-icon-mask.svg" color="#0b0c0c">
     <link rel="apple-touch-icon" href="/plugin-assets/govuk-frontend/dist/govuk/assets/images/govuk-icon-180.png">
     <link rel="manifest" href="/plugin-assets/govuk-frontend/dist/govuk/assets/manifest.json">
+  
 
   <link href="/public/stylesheets/application.css" rel="stylesheet" type="text/css">
+
   
 </head>
 <body class="govuk-template__body js-enabled govuk-frontend-supported">
@@ -22,6 +24,10 @@ Create a GOV.UK One Login or sign in - GOV.UK One Login
 
   
     <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+  
+
+  
 
 <!-- Blank header with no service name for the start page -->
 <header class="govuk-header" data-module="govuk-header">
@@ -38,6 +44,11 @@ Create a GOV.UK One Login or sign in - GOV.UK One Login
 
 </div>
 </header>
+
+
+
+
+
   
     <div class="govuk-width-container">
       
@@ -51,49 +62,41 @@ Create a GOV.UK One Login or sign in - GOV.UK One Login
   </span>
 </p>
 </div>
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+
 
       <main class="govuk-main-wrapper" id="main-content">
         
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" method="post">
-
-    <h1 class="govuk-heading-l">Create your GOV.UK One Login or <br class="auth-heading">sign in</h1>
-
-    <p class="govuk-body">You can use your GOV.UK One Login to access some government services.</p>
-
-    <p class="govuk-body">In the future, you’ll be able to use it to access all services on GOV.UK.</p>
-
-    <p class="govuk-body">You’ll need:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>an email address</li>
-      <li>a way to get security codes - this can be a mobile phone number or an authenticator app</li>
-    </ul>
-
-    <div class="govuk-inset-text">
-      You can also <a href="#" class="govuk-link govuk-link--no-visited-state">use GOV.UK One Login in Welsh (Cymraeg)</a>.
-    </div>
-
-      <button value="create" name="optionSelected" class="govuk-button govuk-!-margin-right-3" data-module="govuk-button" id="create-account-link" formaction="/authentication/create-account/enter-email">
-        Create a GOV.UK One Login
-      </button>
-
-      <div>
-    
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button" id="sign-in-button" formaction="/authentication/enter-email">
-        Sign in
-      </button>
-
-      <p class="govuk-body">
-        <a href="https://www.gov.uk/using-your-gov-uk-one-login/services" class="govuk-link govuk-link--no-visited-state" target="_blank">Services you can use with GOV.UK One Login  (opens in a new tab)</a>
-      </p>
+    <form class="form" action="/op1/authentication/enter-password" method="post">
 
     
-  </div></form>
+
+
+<div class="govuk-form-group">
+<h1 class="govuk-label-wrapper">
+  <label class="govuk-label govuk-label--l" for="email">
+    Enter your email address
+  </label>
+</h1>
+
+
+<input class="govuk-input" id="email" name="email" type="text">
+
 </div>
 
-      </div></main>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </form>
+  </div>
+</div>
+
+      </main>
     </div>
   
 
@@ -166,56 +169,4 @@ Create a GOV.UK One Login or sign in - GOV.UK One Login
   </div>
 </div>
 </footer>
-
-
-
-
-
-  
-
-  
-
-  <script src="/plugin-assets/govuk-prototype-kit/lib/assets/javascripts/kit.js"></script>
-
-
-
-  <script src="/plugin-assets/govuk-prototype-kit/lib/assets/javascripts/auto-store-data.js"></script>
-
-
-
-  <script type="module" src="/plugin-assets/govuk-frontend/dist/govuk/govuk-frontend.min.js"></script>
-
-
-
-  <script type="module" src="/plugin-assets/govuk-frontend/dist/govuk-prototype-kit/init.js"></script>
-
-
-
-  <script src="/plugin-assets/%40govuk-prototype-kit%2Fstep-by-step/javascripts/step-by-step-navigation.js"></script>
-
-
-
-  <script src="/plugin-assets/%40govuk-prototype-kit%2Fstep-by-step/javascripts/step-by-step-polyfills.js"></script>
-
-
-
-  <script src="/plugin-assets/%40x-govuk%2Fgovuk-prototype-components/x-govuk/all.js"></script>
-
-
-
-  <script src="/plugin-assets/%40x-govuk%2Fgovuk-prototype-components/govuk-prototype-kit/init.js"></script>
-
-
-
-  <script src="/plugin-assets/jquery/dist/jquery.js"></script>
-
-
-
-  <script type="module" src="/public/javascripts/application.js"></script>
-
-
-
-
-  
-
 

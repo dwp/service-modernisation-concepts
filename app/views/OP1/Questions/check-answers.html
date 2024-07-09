@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Check your details before confirming
+      </h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "What type of change do you want to report?"
+            },
+            value: {
+              text: "The person I am caring for has moved in to a care home permanently"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/op1/questions/typeofchange",
+                  text: "Change",
+                  visuallyHiddenText: "Question 1"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "When did they move in to the care home?"
+            },
+            value: {
+              text: "09 July 2024"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/op1/questions/move-date",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "What is the name and address is the care home?"
+            },
+            value: {
+              text: "SMP Care home, 11 Downing street, London, SW1A 2AB"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/op1/questions/name-address",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "How is the care home paid for?"
+            },
+            value: {
+              text: "Fully funded by local authority or NHS"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/op1/questions/move-date",
+                  text: "Change",
+                  visuallyHiddenText: "Question 4"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <p>
+        By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct. Your benefits will be impacted with this change.
+      </p>
+
+      <form action="/op1/questions/confirmation-page" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Accept and send"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
