@@ -9,18 +9,16 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-thirds">
     <h1 class="govuk-heading-xl">
-      {{"Welcome Sarah Smith"}}
+      {{"Tell DWP about a change"}}
     </h1>
     <p class="govuk-heading-s">
       {{"Last Logged in 8th June 2024 10:35:28"}}
     </p>
-    {{ govukInsetText({
-      text: "It can take up to 7 days for any payments to be processed."
-    }) }}
+    
 </div>
-<h1 class="govuk-heading-l">Your Details</h1>
 
-      <h2 class="govuk-heading-m">Personal details</h2>
+
+      <h2 class="govuk-heading-m">Your details</h2>
 
       {{ govukSummaryList({
         classes: "govuk-!-margin-bottom-9",
@@ -59,23 +57,8 @@
               ]
             }
           },
-          {
-            key: {
-              text: "Customer reference"
-            },
-            value: {
-              text: "Not provided"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "customer reference"
-                }
-              ]
-            }
-          },
+          
+            
           {
             key: {
               text: "Address"
@@ -113,36 +96,36 @@
         ]
       }) }}
 
-      <h1 class="govuk-heading-l">Change of Circumstances</h1>
+      <h1 class="govuk-heading-l">What type of change do you want to report?</h1>
 
 <p></p>
 
        <p class="govuk-heading-m">
-        <a href="#" class="govuk-link govuk-link--no-underline">Work, Income & Savings</a>
+        <a href="#" class="govuk-link govuk-link--no-underline">Work, income & savings</a>
       </p>
       <p class="govuk-s">
-        {{"For Employment status, Sick pay, Maternity Allowance, savings, investment and bank account details."}}
+        {{"Employment status, sick pay, Maternity Allowance, savings, investment and bank account details."}}
         
         <p class="govuk-heading-m">
           <a href="#" class="govuk-link govuk-link--no-underline">Health</a>
         </p>
         <p class="govuk-s">
-          {{"For illness, disability, pregnancy,  fit notes and hospital stays."}}
+          {{"Illness, disability, pregnancy, fit notes and hospital stays."}}
 
           <p class="govuk-heading-m">
-            <a href="/op1/questions/typeofchange" class="govuk-link govuk-link--no-underline">My Caring Responsibilities</a>
+            <a href="/op1/questions/caring-change" class="govuk-link govuk-link--no-underline">Caring responsibilities</a>
           </p>
           <p class="govuk-s">
-            {{"For anyone you are caring for."}}
+            {{"who you care for, type of care and amount of care you provide"}}
 
             <p class="govuk-heading-m">
-              <a href="#" class="ggovuk-link govuk-link--no-underline">Relationship & Dependenciess</a>
+              <a href="#" class="ggovuk-link govuk-link--no-underline">Relationship & dependenciess</a>
             </p>
             <p class="govuk-s">
               {{"For your partner, children and anyone in your household."}}
 
               <p class="govuk-heading-m">
-                <a href="#" class="ggovuk-link govuk-link--no-underline">Personal & Contact</a>
+                <a href="#" class="ggovuk-link govuk-link--no-underline">Personal & contact</a>
               </p>
               <p class="govuk-s">
                 {{"For name, date of birth, email, phone numbers and contact preferences."}}
