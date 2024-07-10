@@ -21,7 +21,7 @@
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
         {{ govukRadios({
-          name: "What type of change do you want to report?",
+          name: "What has changed ?",
           fieldset: {
             legend: {
               text: "What type of change do you want to report?",
@@ -43,13 +43,14 @@
               text: "The person I am caring for has moved in to a care home permanently "
             },
             {
-              value: "I have a new caring responsibility",
-              text: "I have a new caring responsibility"
+              value: "I am not responsible for this person's care anymore'",
+              text: "I am not responsible for this person's care anymore"
             },
             {
-              value: "I no longer have caring responsibilities",
-              text: "I no longer have caring responsibilities"
+              value: "The amount of care I provide for this person has changed",
+              text: "The amount of care I provide for this person has changed"
             }
+            
           ]
         }) }}
 
