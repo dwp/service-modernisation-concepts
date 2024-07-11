@@ -1,0 +1,146 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+</head>
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-thirds">
+    <h1 class="govuk-heading-xl">
+      {{"Tell DWP about a change"}}
+    </h1>
+    <p class="govuk-heading-s">
+      {{"Last Logged in 8th June 2024 10:35:28"}}
+    </p>
+    
+</div>
+      <h2 class="govuk-heading-m">Your details</h2>
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "Debra Philips"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Date of birth"
+            },
+            value: {
+              text: "5 January 1978"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "date of birth"
+                }
+              ]
+            }
+          },
+          
+            
+          {
+            key: {
+              text: "Address"
+            },
+            value: {
+              html: "72 Guild Street<br>London<br>SE23 6FH"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Contact details"
+            },
+            value: {
+              html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "contact details"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h1 class="govuk-heading-l">What type of change do you want to report?</h1>
+
+<p></p>
+
+       <p class="govuk-heading-m">
+        <a href="#" class="govuk-link govuk-link--no-underline">Work, income & savings</a>
+      </p>
+      <p class="govuk-s">
+        {{"Employment status, sick pay, Maternity Allowance, savings, investment and bank account details."}}
+        
+        <p class="govuk-heading-m">
+          <a href="#" class="govuk-link govuk-link--no-underline">Health</a>
+        </p>
+        <p class="govuk-s">
+          {{"Illness, disability, pregnancy, fit notes and hospital stays."}}
+
+          <p class="govuk-heading-m">
+            <a href="/op1/questions/caring-change" class="govuk-link govuk-link--no-underline">Caring responsibilities</a>
+          </p>
+          <p class="govuk-s">
+            {{"Who you care for, type of care and amount of care you provide"}}
+
+            <p class="govuk-heading-m">
+              <a href="#" class="ggovuk-link govuk-link--no-underline">Relationship & dependenciess</a>
+            </p>
+            <p class="govuk-s">
+              {{"For your partner, children and anyone in your household."}}
+
+              <p class="govuk-heading-m">
+                <a href="#" class="ggovuk-link govuk-link--no-underline">Personal & contact</a>
+              </p>
+              <p class="govuk-s">
+                {{"For name, date of birth, email, phone numbers and contact preferences."}}
+
+                <p class="govuk-heading-m">
+                  <a href="#" class="ggovuk-link govuk-link--no-underline">Where you live and what it costs</a>
+                </p>
+                <p class="govuk-s">
+                  {{"For address, landord information, rent and mortgage payments."}}
+
+                  <p class="govuk-heading-m">
+                    <a href="#" class="ggovuk-link govuk-link--no-underline">My change is not listed</a>
+                  </p>
+
+
+
+
+    </div>
+  </div>
+</p>
+{% endblock %}
