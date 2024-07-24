@@ -10,9 +10,7 @@
 {{ govukNotificationBanner({
   text: "You are logged in as Daniel Philips."
 }) }}
-</p>
-<a href="/op1/my-account/summary" class="ggovuk-link govuk-link--no-underline">Log out from Daniel Philips Account</a>
-</p>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-thirds">
     <h1 class="govuk-heading-xl">
@@ -85,13 +83,30 @@
               text: "Contact details"
             },
             value: {
-              html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
+              html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">joanne.philips@example.com</p>'
             },
             actions: {
               items: [
                 {
                   href: "#",
                   text: "Change",
+                  visuallyHiddenText: "contact details"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Benefits"
+            },
+            value: {
+              html: '<p class="govuk-body">Disability Living Allowance Child</p>'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "",
                   visuallyHiddenText: "contact details"
                 }
               ]
@@ -139,7 +154,7 @@
                   </p>
 
                 </p>
-                <a href="/op1/my-account/summary" class="ggovuk-link govuk-link--no-underline">Log out from Daniel Philips Account</a>
+                <a href="/op1/linked-profiles/daniel-logout" class="ggovuk-link govuk-link--no-underline">Log out from Daniel Philips Account</a>
                 </p>
 
 
