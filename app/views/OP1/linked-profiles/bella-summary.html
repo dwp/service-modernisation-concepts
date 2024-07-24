@@ -6,6 +6,12 @@
 
 {% block content %}
 
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{{ govukNotificationBanner({
+  text: "You are logged in as Bella Philips."
+}) }}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-thirds">
     <h1 class="govuk-heading-xl">
@@ -25,7 +31,7 @@
               text: "Name"
             },
             value: {
-              text: "Joanne Philips"
+              text: "Bella Philips"
             },
             actions: {
               items: [
@@ -42,7 +48,7 @@
               text: "Date of birth"
             },
             value: {
-              text: "5 January 1978"
+              text: "5 January 1928"
             },
             actions: {
               items: [
@@ -61,7 +67,7 @@
               text: "Address"
             },
             value: {
-              html: "72 Guild Street<br>London<br>SE23 6FH"
+              html: "59 Guild Street<br>London<br>SE23 6FH"
             },
             actions: {
               items: [
@@ -109,12 +115,6 @@
         <p class="govuk-s">
           {{"Illness, disability, pregnancy, fit notes and hospital stays."}}
 
-          <p class="govuk-heading-m">
-            <a href="/op1/questions/caring-change" class="govuk-link govuk-link--no-underline">Caring responsibilities</a>
-          </p>
-          <p class="govuk-s">
-            {{"Who you care for, type of care and amount of care you provide"}}
-
             <p class="govuk-heading-m">
               <a href="#" class="ggovuk-link govuk-link--no-underline">Relationship & dependenciess</a>
             </p>
@@ -137,17 +137,9 @@
                     <a href="#" class="ggovuk-link govuk-link--no-underline">My change is not listed</a>
                   </p>
 
-
-                  <h1 class="govuk-heading-l">Switch Profile</h1>
-
-                  <p></p>
-                  
-                         <p class="govuk-heading-m">
-                          <a href="/op1/linked-profiles/linked-account" class="govuk-link govuk-link--no-underline">Linked Accounts</a>
-                        </p>
-                        <p class="govuk-s">
-                          {{"For adding or managing linked accounts."}}
-
+                </p>
+                <a href="/op1/my-account/summary" class="ggovuk-link govuk-link--no-underline">Log out from Bella Philips Account</a>
+                </p>
 
 
 
