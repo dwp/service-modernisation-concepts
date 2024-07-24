@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      </h1>
+
+      <form class="form" action="/op1/linked-profiles/bella-summary" method="post">
+
+        <p>
+          {% from "govuk/components/password-input/macro.njk" import govukPasswordInput %}
+          <h2 class="govuk-heading-m">
+            Verification Check
+          </h2>
+{{ govukPasswordInput({
+  label: {
+    text: "Enter Security Code for Bella Philips"
+  },
+  id: "password-input",
+  name: "password"
+}) }}
+        </p>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
