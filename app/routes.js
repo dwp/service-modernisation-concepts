@@ -11,8 +11,8 @@ router.post('/op1/linked-profiles/security-check', function(request, response) {
 
     var manageaccounts = request.session.data['manageaccounts']
     if (manageaccounts == "Bella Philips"){
-        response.redirect("/op1/linked-profiles/security-check-bella")
+        response.redirect("/OP1/linked-profiles/security-check-bella")
     } else {
-        response.redirect("/op1/linked-profiles/security-check")
+        response.redirect("/OP1/linked-profiles/security-check")
     }
 })
