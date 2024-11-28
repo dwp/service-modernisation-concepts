@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+}) }}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+   
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "PROTOTYPE"
+  },
+  html: 'This is a prototype and may not represent the live journey.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+Test      </h1>
+
+      <h2 class="govuk-heading-m">Purpose of the MVP</h2>
+<p>Explore journeys within the end-to-end service blueprint across the three benefits within MVP scope. To see if it is possible to create common data, process and service delivery model.</p>
+
+<p>The three benefits in scope are:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.gov.uk/attendance-allowance">Attendance Allowance</a></li>
+        <li><a href="https://www.gov.uk/carers-allowance">Carer's Allowance</a></li>
+        <li><a href="https://www.gov.uk/disability-living-allowance-children">Disability Living Allowance Child</a></li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Versions</h2>
+
+      <h3 class="govuk-heading-s">Version 1</h3>
+      
+      <p>The first MVP based on a basic flow for a user to log in and report a change of caring circumstances.</p>
+      
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Persona - Joanna</li>
+      <li>Journey flow includes log in to account, navigate to a change of caring responsibilities, answer flow of quesitons, confirmation screen with information about the change to entitlement</li>
+      <li>Secondary flow included later - linked profile</li>
+    </ul>
+    <p></p>
+      {{ govukButton({
+        text: "Start now",
+        href: "OP1/Authentication/Register",
+        isStartButton: true
+      }) }}
+
+     
+
+    </div>
+
+    
+  </div>
+
+{% endblock %}
