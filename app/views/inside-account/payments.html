@@ -4,162 +4,138 @@
 {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{{ govukHeader({
+  classes: "govuk-header--full-width-border"
+}) }}
+{{ govukServiceNavigation({
+  navigation: [
+    {
+      href: "home",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Apply and track"
+
+    },
+    {
+      href: "#",
+      text: "Payments",
+      active: true
+    }
+  ]
+}) }}
+
+{% endblock %}
+
 {% block content %}
 
+
 <div class="govuk-grid-row govuk-!-margin-bottom-5">
-  <div class="nhsuk-grid-column-two-thirds">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
       {{"Payments"}}
     </h1>
-    <h2>
+    <h2 class="govuk-heading-m"> 
       Next payment due on
-    </h2>
-
-    <p class="govuk-heading-s">
-      {{"1st March 2030"}}
+      </h2>
+      <p class="govuk-body-m">
+      {{"1st March 2025"}}
     </p>
-    <h3>
+    <h2 class="govuk-heading-m"> 
       Expected amount
-    </h3>
-    <p class="govuk-body-s">
+      </h2>
+    <p class="govuk-body-m">
       {{"£560"}}
     </p>
-    <p class="govuk-body-s">
+    <p class="govuk-body-m govuk-!-margin-top-7">
       {{"Payments can take up to 7 days to appear in your account."}}
     </p>
   </div>
+  </main>
 </div>
 
 <div class="govuk-grid-row card govuk-!-margin-bottom-7">
   <main class="govuk-main-wrapper">
-    <div class="nhsuk-grid-column-full">
-      <h2>Your benefits</h2>
-
-
-      <h3>Maternity Allowance</h3>
-      <p>Maternity Allowance is a payment you can get when you take time off to have a baby. You could get it if you are
+      <h2 class="govuk-heading-l">Benefits</h2>
+      <div class="govuk-grid-column-two-thirds govuk-grid-column-one-third">
+           <h3 class="govuk-heading-m">Maternity Allowance</h3>
+      <p class="govuk-body-m">Maternity Allowance is a payment you can get when you take time off to have a baby. You could get it if you are
         employed but cannot get Statutory Maternity Pay (SMP), are self-employed or have recently stopped working.
         Find out more about <a href="">Maternity Allowance</a>.</p>
-
-      <h3>Disability Living Allowance for Children</h3>
-      <p>Disability Living Allowance ( DLA ) for children can help with the extra costs of looking after a child under
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <p class="govuk-body-m">Expected amount: <strong>£220</strong>.</p>
+    </div>
+    <div class="govuk-grid-column-two-thirds govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Disability Living Allowance for Children</h3>
+        <p class="govuk-body-m">Disability Living Allowance ( DLA ) for children can help with the extra costs of looking after a child under
         16 who has difficulties walking or needs much more looking after than a child of the same age who does not have
         a disability. Find out more about <a href="">Disability Living Allowance (DLA) for children</a>.
       </p>
     </div>
+    <div class="govuk-grid-column-one-third">
+      <p class="govuk-body-m">Expected amount: <strong>£340</strong>.</p>
+      </div>
   </main>
 </div>
 
-<div class="govuk-grid-row govuk-!-margin-bottom-7">
-  <main class="govuk-main-wrapper">
-    <div class="nhsuk-grid-column-full">
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Your benefits</caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Your benefits</th>
-            <th scope="col" class="govuk-table__header">Expected amounts</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Maternity Allowance
-
-              <details class="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    Tell me more about Maternity Allowance
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  Maternity Allowance is a payment you can get when you take time off to have a baby. You could get it
-                  if you are employed but cannot get Statutory Maternity Pay (SMP), are self-employed or have recently
-                  stopped working.
-                  Find out more about <a href="">Maternity Allowance</a>.
-                </div>
-              </details>
-            </th>
-            <td class="govuk-table__cell">£220</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Disability Living Allowance for Children
-
-              <details class="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    Tell me more about Disability Living Allowance for Children
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  Disability Living Allowance ( DLA ) for children can help with the extra costs of looking after a
-                  child under 16 who has difficulties walking or needs much more looking after than a child of the same
-                  age who does not have a disability. Find out more about <a href="">Disability Living Allowance (DLA)
-                    for children</a>.
-                </div>
-              </details>
-            </th>
-            <td class="govuk-table__cell">£340</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
-</div>
 
 <div class="govuk-grid-row card govuk-!-margin-bottom-7">
   <main class="govuk-main-wrapper">
-    <div class="nhsuk-grid-column-one-half nhsuk-grid-column-one-half">
-      <h2>Your payments</h2>
-      <p>
+    <div class="govuk-grid-column-full-width">
+      <h2 class="govuk-heading-l">Your payments</h2>
+      <p class="govuk-body-m">
         <a href="#">View statement history</a>
       </p>
-      <p>
+      <p class="govuk-body-m">
         <a href="#">Download statements</a>
       </p>
-    </div>
-
-    <div class="nhsuk-grid-column-one-third nhsuk-grid-column-one-third-tablet">
-    </div>
-    <div class="nhsuk-grid-column-one-half nhsuk-grid-column-one-half">
-
-
-      <p>
+      <p class="govuk-body-m">
         <a href="#">Payment notification</a>
       </p>
-      <p>
+      <p class="govuk-body-m">
         <a href="#">Change bank details</a>
       </p>
-    </div>
+      </div>
   </main>
 </div>
+
 
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 <div class="govuk-grid-row govuk-!-margin-bottom-7">
   <main class="govuk-main-wrapper">
-    <div class="nhsuk-grid-column-one-half nhsuk-grid-column-one-half">
-      <h2>Other services</h2>
-      <p>
+    <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
+      <h2 class="govuk-heading-l">Other services</h2>
+      <p class="govuk-body-m">
         <a href="#">Benefits explanation</a>
       </p>
-      <p>
+      <p class="govuk-body-m">
         <a href="#">Citizens Advice</a>
       </p>
-      <p>
+      <p class="govuk-body-m">
         <a href="#">Contact preferences</a>
       </p>
-      <p>
+      <p class="govuk-body-m">
         <a href="#">Support</a>
       </p>
     </div>
 
 
-    <div class="nhsuk-grid-column-one-half nhsuk-grid-column-one-half">
+    <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
 
 
       <div class="govuk-inset-text">
-        <h3>Talk to an advisor</h3>
-        <p>
+        <h2 class="govuk-heading-l">Talk to an advisor</h2>
+        <p class="govuk-body-m">
           Telephone: 020 79466 0101
           <br>
           Textphone: 020 7946 0102
@@ -173,3 +149,5 @@
   </main>
 </div>
 {% endblock %}
+
+
