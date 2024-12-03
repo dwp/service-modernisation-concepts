@@ -1,0 +1,79 @@
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row govuk-!-margin-bottom-5">
+    <div class="nhsuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      {{"Welcome Sarah Smith"}}
+    </h1>
+    <p class="govuk-heading-s">
+      {{"Last Logged in 8th June 2024 10:35:28"}}
+    </p>
+    <p class="govuk-body-s">
+      {{"Payments can take up to 7 days to appear in your account."}}
+    </p>
+  </div>
+</div>
+
+<div class="govuk-grid-row card govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+            <h2>Benefits</h2>
+            <a href="payments">View your benefit payments</a>
+          </p>
+            <a href="#">View your statements</a>
+          </div>
+          <div class="nhsuk-grid-column-one-third nhsuk-u-one-third-tablet">
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+            <h2>Upcoming payments</h2>
+            <p>5th March 2030</p>
+          </p>
+            <h3>Expected amount</h3>
+            <p>£560</p>
+      </div>
+  </main>
+</div>
+
+<div class="govuk-grid-row card govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+        <h2>Your application</h2>
+        <p>REF: SMP2030</p>
+        
+      </div>
+      <div class="nhsuk-grid-column-one-third nhsuk-u-one-third-tablet">
+      </div>
+      <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+        <h3>Status</h3>
+        <p>In review</p>
+        <h4>Check status</h4>
+        <a href="#">Track your application</a>
+      </p>
+        <h4>Last updated</h4>11 June 2030 11:33:08
+      </div>
+  </main>
+</div>
+
+<div class="govuk-grid-row card govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="nhsuk-grid-column-one-half nhsuk-u-one-half">
+        <h2>Your profile</h2>
+        <a href="#">View your personal details</a>
+      </p>
+        <a href="#">View or update your accessibility needs</a>
+      </p>
+        <a href="#">Report a change of circumstance</a>
+      </div>
+    </p>
+  </main>
+</div>
+{% endblock %}
+
+

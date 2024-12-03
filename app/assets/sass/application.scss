@@ -5,3 +5,11 @@
 
 // Add extra styles here
 @import 'node_modules/nhsuk-frontend/packages/nhsuk';
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #b1b4b6;
+    max-width: 1000px;
+}
