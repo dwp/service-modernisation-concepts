@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+Application tracker login      </h1>
+
+<p class="govuk-body-m">If you already have an account <a href="">sign in</a>.</p>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+        {{ govukInput({
+          label: {
+            text: "Enter reference number"
+          },
+          classes: "govuk-!-width-one-half",
+          id: "one-half",
+          name: "oneHalf"
+        }) }}
+        
+
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+{{ govukDateInput({
+  id: "passport-issued",
+  namePrefix: "passport-issued",
+  fieldset: {
+    legend: {
+      text: "Enter your date of birth"
+    }
+  }
+}) }}
+
+
+        {{ govukButton({
+          text: "Track",
+          href: "with-login-track"
+        }) }}
+
+      </form>
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <div class="govuk-inset-text">
+          <h2 class="govuk-heading-m">Talk to an advisor</h2>
+          <p class="govuk-body-m">
+            Telephone: 020 79466 0101
+            <br>
+            Textphone: 020 7946 0102
+            <br>
+            Monday to Friday, 9am to 5pm (except public holidays)
+            <br>
+            <a href="">Find out about call charges</a> <br>
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+{% endblock %}

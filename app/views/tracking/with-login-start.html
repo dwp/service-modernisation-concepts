@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+DWP Application Status Tracker Concept – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        DWP Application Status Tracker Concept 
+      </h1>
+  </div>
+      <div class="govuk-grid-column-two-thirds">
+
+      <p>Use this service to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>check your application progress</li>
+        <li>update your name, address or other details</li>
+        <li>do something else</li>
+      </ul>
+
+      <p>Please have your reference number from your application ready.</p>
+
+      {{ govukButton({
+        text: "Start",
+        href: "with-login-enter-reference",
+        isStartButton: true
+      }) }}
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <div class="govuk-inset-text">
+          <h2 class="govuk-heading-m">Talk to an advisor</h2>
+          <p class="govuk-body-m">
+            Telephone: 020 79466 0101
+            <br>
+            Textphone: 020 7946 0102
+            <br>
+            Monday to Friday, 9am to 5pm (except public holidays)
+            <br>
+            <a href="">Find out about call charges</a> <br>
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+{% endblock %}
