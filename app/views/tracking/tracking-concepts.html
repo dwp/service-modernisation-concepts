@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Tracking concepts – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+  
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/index"
+    },
+    {
+      text: "Concept 3: Tracking"
+    }
+  ]
+}) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-xl">Concept 3: Tracking</h1>
+<p>The prototype pages linked below explore the concept of 'Tracking'. The first example illustrates the experience of a user who does not log in, perhaps because they do not have a digital account. The second illustrates the experience of a user who does log in.</p>
+
+
+<ul class="govuk-list govuk-list--bullet">
+        <li><a href="no-login-confirmation">Tracking: No log in</a></li>
+        <li><a href="with-login-confirmation">Tracking: With log in</a></li>
+      </ul>
+
+    </div>
+  </div>
+</main>
+</div>
+{% endblock %}
