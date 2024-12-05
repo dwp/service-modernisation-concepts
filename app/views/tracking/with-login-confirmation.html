@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Application complete",
+        html: "Your reference number is<br><strong>SMP123UCD</strong>"
+      }) }}
+
+      <p>
+        Please keep a note of your reference number to track your application.
+      </p>
+      <p>
+        <a href="with-login-start">Track your application.</a>
+      </p>
+
+      <p>
+        Create an account to apply and track applications, as well as manage and update your profile.      </p>
+
+        {{ govukButton({
+          text: "Create account",
+          href: ""
+        }) }}
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>
+        You can either contact our team or track your application code using your reference number.      </p>
+
+      <p>
+        <a href="#">
+          What did you think of this service?
+        </a> (takes 30 seconds)
+      </p>
+
+
+    </div>
+  </div>
+
+{% endblock %}
