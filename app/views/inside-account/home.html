@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-{{ serviceName }} – GOV.UK Prototype Kit
+Home {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
@@ -21,7 +21,7 @@
       active: true
     },
     {
-      href: "#",
+      href: "apply-track",
       text: "Apply and track"
     },
     {
@@ -33,9 +33,16 @@
 
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype"
+    },
+    html: 'This is a prototype and content is likely to change.'
+  }) }}
+{% endblock %}
+
 {% block content %}
-
-
 <div class="govuk-grid-row govuk-!-margin-bottom-5">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-column-two-thirds">
@@ -108,7 +115,7 @@
 
         <h4 class="govuk-heading-s">Check status</h4>
         <p class="govuk-body-m">
-          <a href="#">Track your application</a>
+          <a href="application-submitted.html">Track your application</a>
         </p>
         <h4 class="govuk-heading-s">Last updated</h4>
         <p class="govuk-body-m">

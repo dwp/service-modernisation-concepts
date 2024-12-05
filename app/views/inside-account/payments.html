@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-{{ serviceName }} – GOV.UK Prototype Kit
+Payments {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
@@ -20,7 +20,7 @@
       text: "Home"
     },
     {
-      href: "#",
+      href: "apply-track",
       text: "Apply and track"
 
     },
@@ -34,15 +34,24 @@
 
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype"
+    },
+    html: 'This is a prototype and content is likely to change.'
+  }) }}
+{% endblock %}
+
+
 {% block content %}
-
-
 <div class="govuk-grid-row govuk-!-margin-bottom-5">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
       {{"Payments"}}
     </h1>
+    <span class="govuk-caption-xl govuk-!-margin-bottom-7">View your statements and payment details</span>
     <h2 class="govuk-heading-m"> 
       Next payment due on
       </h2>

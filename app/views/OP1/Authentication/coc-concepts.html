@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/index"
+    },
+    {
+      text: "Concept 2: change of circumstances"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+
+
+<h1 class="govuk-heading-xl">Concept 2: change of circumstance</h1>
+<p>This prototype illustrates a carer (claiming Carer's Allowance) telling DWP that they have stopped caring duties because the disabled person they care for has gone into a care home.</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="/OP1/Authentication/Register">Log into account via OneLogin</a></li>
+  <li><a href="/OP1/my-account/summary">Tell DWP about a change</a> (Click on 'Caring responsibilities')</li>
+      </ul>
+    </div>
+  </div>
+</main>
+</div>
+
+{% endblock %}
