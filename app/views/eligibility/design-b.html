@@ -1,0 +1,123 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        html: "You may be eligible for the following benefits"
+      }) }}
+    </div>
+    </div>
+  
+
+      <div class="govuk-grid-row">
+        <main class="govuk-main-wrapper">
+          <div class="govuk-grid-column-two-thirds govuk-grid-column-one-third">
+
+      <p class="govuk-body-m"><strong>
+Based on your circumstances, you might be able to get these benefits and financial support.      </p>
+</strong>
+<p>
+</div>
+        </main>
+      
+<div class="govuk-grid-column-one-third">
+ <p class="govuk-body-m" align="right"><strong></strong></p>
+</div>
+      </div>
+    </main>
+
+    
+
+
+  <div class="govuk-grid-row">
+    <main class="govuk-main-wrapper">
+      <div class="govuk-grid-column-two-thirds govuk-grid-column-one-third">
+
+
+     
+      <h2 class="govuk-heading-m">Maternity Allowance</h2>
+      <p>
+        <strong>Estimated payout time: 3 weeks</strong>
+      </p>
+      <p class="govuk-body-m">
+        Maternity Allowance is a payment you can get when you take time off to have a baby. You could get it if you are employed but cannot get Statutory Maternity Pay (SMP), are self-employed or have recently stopped working. Find out more about <a href="">Maternity Allowance</a>.
+      </p>
+    </div>
+   </main>
+
+      
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-checkboxes__item checkbox my-btn-right">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          </label>
+        </div>
+      </div>
+    </main>
+  </div>
+   
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+  <div class="govuk-grid-row">
+    <main class="govuk-main-wrapper">
+      <div class="govuk-grid-column-two-thirds govuk-grid-column-one-third">
+
+
+      <h2 class="govuk-heading-m">Disability Living Allowance for Children</h2>
+      <p>
+        <strong>Estimated payout time: 3 weeks</strong>
+      </p>
+       <p class="govuk-body-m">
+        Disability Living Allowance for Children can help with the extra costs of looking after a child under 16 who has difficulties working or needs much more looking after than a child or the same age who does not have a disability.  Find out more about <a href="">Disability Living Allowance for Children</a>.
+      </p>
+    
+    </div>
+    </main>
+    
+
+
+<div class="govuk-grid-column-one-third">
+  <div class="govuk-checkboxes__item my-btn-right">
+    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+    </label>
+  </div>
+</div>
+</main>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<button type="submit" class="govuk-button govuk-button--secondary my-btn-right" data-module="govuk-button" align="right">
+  Apply to selected
+</button>
+
+
+
+
+<div class="govuk-grid-row govuk-!-margin-bottom-9">
+  <main class="govuk-main-wrapper">
+<div class="govuk-grid-column-two-thirds">
+  <p class="govuk-body-m">
+You can choose to apply for some or all of the benefits you are eligible for at the same time.  </p>
+    
+<p class="govuk-body-m">
+If you decide to apply for more than one benefit, you will be asked for all of the information and evidence needed to complete your application.      
+</div>
+  </main>
+</div>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Apply to all"
+}) }}
+{% endblock %}
