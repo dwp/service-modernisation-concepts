@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{{ govukHeader({
+  classes: "govuk-header--full-width-border"
+}) }}
+{{ govukServiceNavigation({
+  navigation: [
+    {
+      href: "#",
+      text: "Home",
+      active: true
+    },
+    {
+      href: "apply-track",
+      text: "Apply and track"
+    },
+    {
+      href: "payments",
+      text: "Payments"
+    }
+  ]
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype"
+    },
+    html: 'This is a prototype and content is likely to change.'
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-bottom-5">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      {{"Welcome Sarah Smith"}}
+    </h1>
+    <p class="govuk-body-m">
+      {{"Last logged in 8th June 2024 10:35:28"}}
+    </p>
+    <p class="govuk-body-m">
+      {{"Payments can take up to 7 days to appear in your account."}}
+    </p>
+  </div>
+  </main>
+</div>
+
+<div class="govuk-grid-row card govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
+            <h2 class="govuk-heading-l">Benefits</h2>
+            <p class="govuk-body-m">
+              <a href="payments">View your benefit payments</a>
+            </p>
+            <p class="govuk-body-m">
+            <a href="#">View your statements</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
+          </div>
+          <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
+            <h2 class="govuk-heading-l">Upcoming payments</h2>
+            <p class="govuk-body-m">
+              5th March 2030
+          </p>
+          <h3 class="govuk-heading-m">Expected amount</h3>
+            <p class="govuk-body-m">
+              £560
+            </p>
+      </div>
+  </main>
+</div>
+
+<div class="govuk-grid-row card govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
+      <h2 class="govuk-heading-l">Your application</h2>
+        <p class="govuk-body-m">REF: SMP2030
+        </p>
+        <h3 class="govuk-heading-m">Status</h3>
+        <div class="stepper-wrapper">
+          <div class="stepper-item completed">
+            <div class="step-counter">1</div>
+            <div class="step-name">Submitted</div>
+          </div>
+          <div class="stepper-item completed">
+            <div class="step-counter">2</div>
+            <div class="step-name">Received</div>
+          </div>
+          <div class="stepper-item active">
+            <div class="step-counter">3</div>
+            <div class="step-name">In review</div>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
+      </div>
+      <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
+        
+       
+
+        <h4 class="govuk-heading-s">Check status</h4>
+        <p class="govuk-body-m">
+          <a href="application-submitted.html">Track your application</a>
+        </p>
+        <h4 class="govuk-heading-s">Last updated</h4>
+        <p class="govuk-body-m">
+          11 June 2030 11:33:08
+        </p>   
+    </div>
+  </main>
+</div>
+
+<div class="govuk-grid-row card govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
+      <h2 class="govuk-heading-l">Your profile</h2>
+        <p class="govuk-body-m">
+          <a href="#">View your personal details</a>
+      </p>
+      <p class="govuk-body-m">  
+      <a href="#">View or update your accessibility needs</a>
+      </p>
+      <p class="govuk-body-m"> 
+      <a href="#">Report a change of circumstance</a>
+      </p>
+      </div>
+  </main>
+</div>
+{% endblock %}
+
+
