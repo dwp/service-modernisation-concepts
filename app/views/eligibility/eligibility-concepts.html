@@ -4,11 +4,11 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
+
   
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
+{% block beforeContent %}
 {{ govukBreadcrumbs({
   items: [
     {
@@ -16,32 +16,30 @@
       href: "/index"
     },
     {
-      text: "Concept 2: change of circumstances"
+      text: "Concept 4: Eligibility"
     }
   ]
 }) }}
 {% endblock %}
 
-{% block content %}
 
+{% block content %}
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        
 
+<h1 class="govuk-heading-xl">Concept 4: Eligibility</h1>
+<p>The prototype pages linked below explore the concept of what DWP might show a user after they have answered questions in an eligibility flow.</p>
 
-
-<h1 class="govuk-heading-xl">Concept 2: Change of circumstance</h1>
-<p>This prototype illustrates a carer (claiming Carer's Allowance) telling DWP that they have stopped their caring duties because the disabled person they care for has gone into a care home.</p>
-<p>One the first page, please choose the 'Caring responsibilities' heading to see the journey. </p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li><a href="/OP1/my-account/summary">Tell DWP about a change</a></li>
-      </ul>
+        <li><a href="design-a">Design A</a></li>
+        <li><a href="design-b">Design B</a></li>
+        </ul>
+
     </div>
   </div>
 </main>
 </div>
-
 {% endblock %}
