@@ -20,7 +20,7 @@
         <main class="govuk-main-wrapper">
           <div class="govuk-grid-column-two-thirds govuk-grid-column-one-third">
 
-            <p class="govuk-body-m"><strong>
+      <p class="govuk-body-m"><strong>
 Based on your circumstances, you might be able to get these benefits and financial support.      </p>
 </strong>
 <p>
@@ -28,32 +28,32 @@ Based on your circumstances, you might be able to get these benefits and financi
         </main>
       
 <div class="govuk-grid-column-one-third">
- <p class="govuk-body-m" text-align="right"><strong>Please select</strong></p>
+ <p class="govuk-body-m" align="right"><strong></strong></p>
 </div>
+      </div>
+    </main>
+
+    
+
 
   <div class="govuk-grid-row">
     <main class="govuk-main-wrapper">
       <div class="govuk-grid-column-two-thirds govuk-grid-column-one-third">
 
-  <details class="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-      Pension Credit      </span>
-    </summary>
-    <div class="govuk-details__text">
+
+     
+      <h2 class="govuk-heading-m">Pension Credit</h2>
       <p>
-        <strong>Estimated payout time: 2 weeks</strong>
+        <strong>Estimated payout time: 3 weeks</strong>
       </p>
-      <h2 class="govuk-heading-m">What is it?</h2>
-      <p class="govuk-body-m">
-        Pension Credit tops up your State Pension. To get Pension Credit you must be receiving State Pension but not getting the full amount. You must also be receiving certan benefits. Find out more about <a href="">Pension Credit</a>.
+      <p class="govuk-body-m">Pension Credit gives you extra money to help with your living costs if you're over State Pension age and on a low income. To get Pension Credit you must be receiving State Pension and be receiving certain benefits. Find out more about <a href="">Pension Credit</a>.
       </p>
-  </div>
-  </details>
-      </div>
+    </div>
+   </main>
+
       
       <div class="govuk-grid-column-one-third">
-        <div class="govuk-checkboxes__item checkbox">
+        <div class="govuk-checkboxes__item checkbox my-btn-right">
           <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
           </label>
@@ -61,33 +61,29 @@ Based on your circumstances, you might be able to get these benefits and financi
       </div>
     </main>
   </div>
-      
+   
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
 
   <div class="govuk-grid-row">
     <main class="govuk-main-wrapper">
       <div class="govuk-grid-column-two-thirds govuk-grid-column-one-third">
 
 
-  <details class="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-Funeral Expenses Payment      </span>
-    </summary>
-    <div class="govuk-details__text">
+      <h2 class="govuk-heading-m">Funeral Expense Payments</h2>
       <p>
         <strong>Estimated payout time: 3 weeks</strong>
       </p>
-      <h2 class="govuk-heading-m">What is it?</h2>
-      <p class="govuk-body-m">
-        Funeral Expenses Payment can help with the costs of a funeral, such as burial or cremation fees. To get Funeral Expenses Payment you must be receiving certain benefits, be a close relative of the desceased and organising a funeral in the UK.  Find out more about <a href="">Funeral Expenses Payment</a>.
+       <p class="govuk-body-m">
+        Funeral Expenses Payment can help with the costs of a funeral, such as burial or cremation fees. To get Funeral Expenses Payment you must be receiving certain benefits, be a close relative of the deceased and organising a funeral in the UK. Find out more about <a href="">Funeral Expenses Payment</a>.
       </p>
+    </div>
+    </main>
     
-  </div>
-  </details>
-</div>
-      
+
+
 <div class="govuk-grid-column-one-third">
-  <div class="govuk-checkboxes__item checkbox">
+  <div class="govuk-checkboxes__item my-btn-right">
     <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
     <label class="govuk-label govuk-checkboxes__label" for="waste-3">
     </label>
@@ -95,6 +91,15 @@ Funeral Expenses Payment      </span>
 </div>
 </main>
 </div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<button type="submit" class="govuk-button govuk-button--secondary my-btn-right" data-module="govuk-button" align="right">
+  Apply to selected
+</button>
+
+
+
 
 <div class="govuk-grid-row govuk-!-margin-bottom-9">
   <main class="govuk-main-wrapper">
@@ -111,7 +116,6 @@ If you decide to apply for more than one benefit, you will be asked for all of t
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Apply to selected"
+  text: "Apply to all"
 }) }}
-
 {% endblock %}
