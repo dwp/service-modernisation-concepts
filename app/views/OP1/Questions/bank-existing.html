@@ -16,15 +16,54 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Before you change your bank details
+        Your existing bank details
       </h1>
 
-      <p class="govuk-body">
-If you are expecting a payment in the next 24 hours it may be paid into the bank account we currently have.      </p>
 
+      <h3 class="govuk-heading-m">
+        Bank details details
+      </h3>
+      {{ govukSummaryList({
+        rows: [
+      {
+      key: {
+        text: "Name on account"
+      },
+      value: {
+        text: "Sarah Phillips"
+      }
+      },
+      {
+      key: {
+        text: "Sort code"
+      },
+      value: {
+        text: "00-00-00"
+      }
+      },
+      {
+      key: {
+        text: "Account code"
+      },
+      value: {
+        text: "00000000"
+      }
+      }
+      ,
+      {
+      key: {
+        text: "Building society roll number"
+      },
+      value: {
+        text: "None"
+      }
+      }
+      ]
+      }) }}
+      
     
       
-      <form class="form" action="/OP1/Questions/bank-existing" method="post">
+      <form class="form" action="/OP1/Questions/bank-enter-details" method="post">
       
 
         {{ govukRadios({
@@ -49,7 +88,7 @@ If you are expecting a payment in the next 24 hours it may be paid into the bank
         }) }}
 
         {{ govukButton({
-          text: "Continue"
+          text: "Confirm"
         }) }}
       </form>
     </div>

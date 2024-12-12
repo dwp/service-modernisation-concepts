@@ -52,7 +52,10 @@
 <h1 class="govuk-heading-l">
   Manage account
 </h1>
-<p class="govuk-body">If there is anything which has changed or does not look correct, please <a href="change-circumstances.html">report change of circumstance</a>.</p>
+
+<h2 class="govuk-heading-m govuk-!-margin-top-5">
+  Profile      </h2>
+<p class="govuk-body">If there is anything which has changed or does not look correct, please <a href="change-circumstances-a.html">report change of circumstance</a>.</p>
 
 <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -74,15 +77,15 @@
 </div>
 </div>
 
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row govuk-!-margin-bottom-9">
     <div class="govuk-grid-column-two-thirds card">
 
       
 
       {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
-      <h2 class="govuk-heading-m govuk-!-margin-top-5">
-Profile      </h2>
+      <h3 class="govuk-heading-m govuk-!-margin-top-5">
+Personal details      </h3>
 
 
 {{ govukSummaryList({
@@ -124,9 +127,9 @@ Profile      </h2>
 }) }}
 
 
-<h2 class="govuk-heading-m">
+<h3 class="govuk-heading-m">
   Contact details
-</h2>
+</h3>
 {{ govukSummaryList({
   classes: "govuk-summary-list--no-border",
   rows: [
@@ -159,9 +162,9 @@ value: {
 
 
 
-<h2 class="govuk-heading-m">
+<h3 class="govuk-heading-m">
   Bank details details
-</h2>
+</h3>
 {{ govukSummaryList({
   classes: "govuk-summary-list--no-border",
   rows: [
@@ -201,8 +204,40 @@ value: {
 ]
 }) }}
 
+
+
+
     </div>
+  </div>
+
+ 
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Update circumstances",
+      href: "change-circumstances-a"
+
+    }) }}
 
 
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
+
+<h2 class="govuk-heading-l">Other services</h2>
+<p class="govuk-body-m">
+  <a href="#">Benefits explanation</a>
+</p>
+<p class="govuk-body-m">
+  <a href="#">Citizens Advice</a>
+</p>
+<p class="govuk-body-m">
+  <a href="#">Contact preferences</a>
+</p>
+<p class="govuk-body-m">
+  <a href="#">Support</a>
+</p>
+  </div>
+
+    
+    
 {% endblock %}
