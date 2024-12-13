@@ -1,0 +1,243 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{{ govukHeader({
+  classes: "govuk-header--full-width-border"
+}) }}
+{{ govukServiceNavigation({
+  navigation: [
+  {
+    href: "#",
+    text: "Home"
+    },
+    {
+      href: "#",
+      text: "Apply and track"
+    },
+    {
+      href: "#",
+      text: "Payments"
+    },
+  {
+      href: "#",
+      text: "Manage account",
+      active: true
+    },
+    {
+      href: "#",
+      text: "Support"
+    },
+    {
+      href: "#",
+      text: "Message"
+    }
+  ]
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">
+  Manage account
+</h1>
+
+<h2 class="govuk-heading-m govuk-!-margin-top-5">
+  Profile      </h2>
+<p class="govuk-body">If there is anything which has changed or does not look correct, please <a href="change-circumstances-a.html">report change of circumstance</a>.</p>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    You must report any change of circumstance
+  </strong>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+  <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+    <p class="govuk-body"><a href="">Account history</a></p>
+
+
+  </aside>
+
+</div>
+</div>
+
+  <div class="govuk-grid-row govuk-!-margin-bottom-9">
+    <div class="govuk-grid-column-two-thirds card">
+
+      
+
+      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+      <h3 class="govuk-heading-m govuk-!-margin-top-5">
+Personal details      </h3>
+
+
+{{ govukSummaryList({
+  classes: "govuk-summary-list--no-border",
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: "Sarah Phillips"
+      }
+    },
+    {
+      key: {
+        text: "Date of birth"
+      },
+      value: {
+        text: "1 February 1978"
+      }
+    },
+    {
+      key: {
+        text: "National Insurance number"
+      },
+      value: {
+        text: "QQ123456C"
+      }
+    },
+    {
+      key: {
+        text: "Home address"
+      },
+      value: {
+        html: "12 Pearl Street<br>Bristol<br>BS3 4AB"
+      }
+    }
+  ]
+}) }}
+
+
+<h3 class="govuk-heading-m">
+  Contact details
+</h3>
+{{ govukSummaryList({
+  classes: "govuk-summary-list--no-border",
+  rows: [
+{
+key: {
+  text: "Home phone"
+},
+value: {
+  text: "None"
+}
+},
+{
+key: {
+  text: "Mobile phone"
+},
+value: {
+  text: "0777 777777"
+}
+},
+{
+key: {
+  text: "Email address"
+},
+value: {
+  text: "sarah@example.com"
+}
+}
+]
+}) }}
+
+
+
+<h3 class="govuk-heading-m">
+  Bank details details
+</h3>
+{{ govukSummaryList({
+  classes: "govuk-summary-list--no-border",
+  rows: [
+{
+key: {
+  text: "Name on account"
+},
+value: {
+  text: "Sarah Phillips"
+}
+},
+{
+key: {
+  text: "Sort code"
+},
+value: {
+  text: "00-00-00"
+}
+},
+{
+key: {
+  text: "Account code"
+},
+value: {
+  text: "00000000"
+}
+}
+,
+{
+key: {
+  text: "Building society roll number"
+},
+value: {
+  text: "None"
+}
+}
+]
+}) }}
+
+
+
+
+    </div>
+  </div>
+
+ 
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Update circumstances",
+      href: "change-circumstances-a"
+
+    }) }}
+
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+<h2 class="govuk-heading-l">Other services</h2>
+<p class="govuk-body-m">
+  <a href="#">Benefits explanation</a>
+</p>
+<p class="govuk-body-m">
+  <a href="#">Citizens Advice</a>
+</p>
+<p class="govuk-body-m">
+  <a href="#">Contact preferences</a>
+</p>
+<p class="govuk-body-m">
+  <a href="#">Support</a>
+</p>
+  </div>
+
+    
+    
+{% endblock %}
