@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+ 
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+You have told us you are unemployed. Has this changed?      </h1>
+
+      <p class="govuk-body">
+Updating your employment status could change how much financial support you can get.
+    
+      
+      <form class="form" action="/OP1/Questions/bank-existing" method="post">
+      
+
+        {{ govukRadios({
+          name: "bankDetails",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes, I am employed"
+            },
+            {
+              value: "yes-self",
+              text: "Yes, I am self-employed"
+            },
+            {
+              value: "no",
+              text: "No, nothing has changed"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+    </div>
+  
+
+    <div class="govuk-grid-column-one-third">
+
+  <div class="govuk-inset-text">
+    <h2 class="govuk-heading-l">Talk to an advisor</h2>
+    <p class="govuk-body-m">
+      Telephone: 020 79466 0101
+      <br>
+      Textphone: 020 7946 0102
+      <br>
+      Monday to Friday, 9am to 5pm (except public holidays)
+      <br>
+      <a href="">Find out about call charges</a> <br>
+    </p>
+  </div>
+</div>
+</div>
+{% endblock %}

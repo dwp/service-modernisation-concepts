@@ -1,0 +1,150 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Payments {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{{ govukHeader({
+  classes: "govuk-header--full-width-border"
+}) }}
+{{ govukServiceNavigation({
+  navigation: [
+    {
+      href: "home",
+      text: "Home"
+    },
+    {
+      href: "apply-track",
+      text: "Apply and track"
+
+    },
+    {
+      href: "#",
+      text: "Payments"
+    },
+    {
+      href: "#",
+      text: "Manage account",
+      active: true
+    },
+    {
+      href: "support",
+      text: "Support"
+    },
+    {
+      href: "#",
+      text: "Messages"
+    }
+  ]
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype"
+    },
+    html: 'This is a prototype and content is likely to change.'
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row govuk-!-margin-bottom-5">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      {{"Manage account"}}
+    </h1>
+    <h2 class="govuk-heading-m"> 
+      <img src="/public/images/work.png" style="width:100px;height:100px;">
+       Work, income and savings
+      </h2>
+      <p class="govuk-body-m govuk-!-margin-top-7">
+        {{"Updating your circumstances can change the amount of financial support you can get and could change the amount of benefits you get paid."}}
+      </p>
+  </div>
+  </main>
+</div>
+
+
+<div class="govuk-grid-row card govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-full-width">
+      <h2 class="govuk-heading-l">Change of employment status</h2>
+      <h3 class="govuk-body-m">
+        <a href="/OP1/Questions/employ-change">Change of employment status</a>
+      </h3>
+      <h3 class="govuk-body-m">
+        <a href="#">Change work information</a>
+      </h3>
+      <h3 class="govuk-body-m">
+        <a href="#">View sick pay</a>
+      </h3>
+      <h3 class="govuk-body-m">
+        <a href="#">Update Maternity Allowance</a>
+      </h3>
+      </div>
+  </main>
+</div>
+
+<div class="govuk-grid-row card govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-full-width">
+      <h2 class="govuk-heading-l">Savings and capital</h2>
+      <h3 class="govuk-body-m">
+        <a href="#">Update savings</a>
+      </h3>
+      <h3 class="govuk-body-m">
+        <a href="#">Update additional income</a>
+      </h3>
+      </div>
+  </main>
+</div>
+
+<div class="govuk-grid-row card govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-full-width">
+      <h2 class="govuk-heading-l">Bank account</h2>
+      <h3 class="govuk-body-m">
+        <a href="">Change bank account</a>
+      </h3>
+      
+      </div>
+  </main>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<div class="govuk-grid-row govuk-!-margin-bottom-7">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-one-half govuk-grid-column-one-half">
+      <h2 class="govuk-heading-l">Other services</h2>
+      <p class="govuk-body-m">
+        <a href="#">Benefits explanation</a>
+      </p>
+      <p class="govuk-body-m">
+        <a href="#">Citizens Advice</a>
+      </p>
+      <p class="govuk-body-m">
+        <a href="#">Contact preferences</a>
+      </p>
+      <p class="govuk-body-m">
+        <a href="#">Support</a>
+      </p>
+    </div>
+
+
+
+  </main>
+</div>
+{% endblock %}
+
+
