@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/index"
+    },
+    {
+      text: "Concept 2: Change of circumstances",
+      href: "coc-concepts"
+    }
+    ,
+    {
+      text: "Change caring status"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+
+
+<h1 class="govuk-heading-xl">Change caring status</h1>
+<p>This prototype illustrates a carer (claiming Carer's Allowance) telling DWP that they have stopped their caring duties because the disabled person they care for has gone into a care home. On the first page, choose the <strong>'Caring responsibilities'</strong> heading to see the journey.</p>
+
+
+
+  <p>You can click through the full journey or jump to specific points in the prototype. </p>
+
+  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+    <li>
+      <a class="govuk-link" href="/OP1/my-account/summary">Full journey</a> 
+      <br>On the first page, click on the 'report change of circumstance' links towards the top of the page and on the second page, choose the <strong>'Work, income and savings'</strong> option to continue the journey. </p>
+
+
+
+
+
+    </li>
+    <li>
+      <a class="govuk-link" href="/OP1/my-account/summary">Profile page (incorporates change of circumstances options)</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="/OP1/Questions/employ-change">Change caring status question pages</a>
+    </li>
+  </ul>
+
+
+    </div>
+  </div>
+</main>
+</div>
+
+{% endblock %}

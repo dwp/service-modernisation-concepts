@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/index"
+    },
+    {
+      text: "Concept 2: Change of circumstances",
+      href: "coc-concepts"
+    }
+    ,
+    {
+      text: "Change bank details"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+
+
+
+<h1 class="govuk-heading-xl">Change bank details</h1>
+<p>This prototype illustrates the journey for a user who needs to change their bank details. </p>
+  
+  <p>You can click through the full journey or jump to specific points in the prototype. </p>
+
+  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+    <li>
+      <a class="govuk-link" href="/OP1/my-account/profile-bank">Full journey</a> 
+      <br>On the first page, click on the 'report change of circumstance' links towards the top of the page and on the second page, choose the <strong>'Work, income and savings'</strong> option to continue the journey.
+    </li>
+    <li>
+      <a class="govuk-link" href="/OP1/my-account/profile-bank">Profile page</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="/OP1/my-account/change-circumstances-a">Change of circumstances page (with icons)</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="/OP1/my-account/change-circumstances-a">Change of circumstances page (without icons)</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="/OP1/Questions/bank-change">Change bank details question pages</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="/OP1/Questions/bank-support">Support page</a>
+    </li>
+  </ul>
+
+
+    </div>
+  </div>
+</main>
+</div>
+
+{% endblock %}
