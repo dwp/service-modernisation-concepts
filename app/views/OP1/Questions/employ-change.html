@@ -16,61 +16,20 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Your existing bank details
-      </h1>
+You have told us you are unemployed. Has this changed?      </h1>
 
-
-      <h3 class="govuk-heading-m">
-        Bank details details
-      </h3>
-      {{ govukSummaryList({
-        rows: [
-      {
-      key: {
-        text: "Name on account"
-      },
-      value: {
-        text: "Sarah Phillips"
-      }
-      },
-      {
-      key: {
-        text: "Sort code"
-      },
-      value: {
-        text: "70-09-78"
-      }
-      },
-      {
-      key: {
-        text: "Account code"
-      },
-      value: {
-        text: "82345690"
-      }
-      }
-      ,
-      {
-      key: {
-        text: "Building society roll number"
-      },
-      value: {
-        text: "None"
-      }
-      }
-      ]
-      }) }}
-      
+      <p class="govuk-body">
+Updating your employment status could change how much financial support you can get.
     
       
-      <form class="form" action="/OP1/Questions/bank-enter-details" method="post">
+      <form class="form" action="/OP1/Questions/bank-existing" method="post">
       
 
         {{ govukRadios({
           name: "bankDetails",
           fieldset: {
             legend: {
-              text: "Do you want to change your bank details?",
+              text: "",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--m"
             }
@@ -78,17 +37,21 @@
           items: [
             {
               value: "yes",
-              text: "Yes"
+              text: "Yes, I am employed"
+            },
+            {
+              value: "yes-self",
+              text: "Yes, I am self-employed"
             },
             {
               value: "no",
-              text: "No"
+              text: "No, nothing has changed"
             }
           ]
         }) }}
 
         {{ govukButton({
-          text: "Confirm"
+          text: "Continue"
         }) }}
       </form>
     </div>

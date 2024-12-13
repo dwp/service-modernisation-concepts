@@ -16,79 +16,44 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Your existing bank details
+        We need you to confirm your identity
       </h1>
 
-
-      <h3 class="govuk-heading-m">
-        Bank details details
-      </h3>
-      {{ govukSummaryList({
-        rows: [
-      {
-      key: {
-        text: "Name on account"
-      },
-      value: {
-        text: "Sarah Phillips"
-      }
-      },
-      {
-      key: {
-        text: "Sort code"
-      },
-      value: {
-        text: "70-09-78"
-      }
-      },
-      {
-      key: {
-        text: "Account code"
-      },
-      value: {
-        text: "82345690"
-      }
-      }
-      ,
-      {
-      key: {
-        text: "Building society roll number"
-      },
-      value: {
-        text: "None"
-      }
-      }
-      ]
-      }) }}
-      
+      <p class="govuk-body">
+To confirm your identity, we will send you a 6-digit code. Select how you want to receive this code.
     
       
-      <form class="form" action="/OP1/Questions/bank-enter-details" method="post">
+      <form class="form" action="/OP1/Questions/bank-existing" method="post">
       
 
         {{ govukRadios({
           name: "bankDetails",
           fieldset: {
             legend: {
-              text: "Do you want to change your bank details?",
+              text: "How do you want to receive your code?",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--m"
             }
           },
           items: [
             {
-              value: "yes",
-              text: "Yes"
+              value: "mobile",
+              text: "Mobile (Default)"
             },
             {
-              value: "no",
-              text: "No"
+              value: "email",
+              text: "Email"
+            },
+            {
+              value: "phone",
+              text: "Phone call"
             }
           ]
         }) }}
 
         {{ govukButton({
-          text: "Confirm"
+          text: "Continue",
+          href: "bank-check-phone"
         }) }}
       </form>
     </div>
