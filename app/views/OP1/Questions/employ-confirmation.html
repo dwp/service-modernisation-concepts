@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Application complete",
+        html: "Your employment status has been updated<br>
+        Your reference number is<br><strong>AB123CD</strong>"
+      }) }}
+
+      <p>
+We have updated your employment details. You will be notified abou the next steps by email.      </p>
+
+<p>
+  Please be aware that this may affect your existing benefits.      </p>
+  
+      <h2 class="govuk-heading-m">
+Do you need to make another change?      </h2>
+
+      <p>
+        <a href="">Make another change</a>
+      </p>
+
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
