@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Design next steps – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        General
+      </h1>
+
+      <p>This page explains research and design that was not specific to a particular page in the concept 1 prototype. </p>
+
+      <h2 class="govuk-heading-m">
+      What was the design intention?
+      </h2>
+      <p>If users are using a single application form to apply to multiple benefits, it makes logical sense for them to also tell us once about any change of circumstances. It is a pain point for users, having to tell us the same information multiples times, in different ways. 
+        </p>
+
+      <h2 class="govuk-heading-m">
+      Research questions
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>What research around change of circumstances has been done previously at DWP?  (not part of this prototype)  </li>
+        <li>What was participants recent experience of updating their circumstances with DWP? </li>
+        <li>What are participants' thoughts on the change of circumstances screens? </li>
+       <li>How would participants update their bank details and can they understand the given change of circumstance categories.</li>
+       </ul>
+
+<h2 class="govuk-heading-m">
+General limitations</h2>
+
+<h3 class="govuk-heading-s">
+  Design</h3>
+<ul class="govuk-list govuk-list--bullet">
+ <li>The design system was not followed in all places. Designs were originally created (and tested) as wireframes in Mural and have since been recreated in the prototype kit.  </li>
+ <li>The design doesn't explore the relationship with OneLogin or how a change of circumstance might happen if that piece of data is held by OneLogin as well as by a DWP service.  </li>
+
+</ul>
+
+<h3 class="govuk-heading-s">
+  Research</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>The journey tested started with the 'Profile page' so no comprehensive journey was tested.  
+    </li>
+    <li>None of the change of circumstances journeys tested were specific to a journey with multiple benefits, nor did they address particular challenges that could arise when combining multiple benefits in a change of circumstances flow.  
+    </li>
+   </ul>
+
+   <h2 class="govuk-heading-m">
+    Next steps</h2>
+
+    <p>
+Future design and research should:    </p>
+    
+
+      <ul class="govuk-list govuk-list--bullet">
+            <li>Include desk research to identify which change of circumstances designs already exist for single benefits and what the UR analysis for these products has revealed. </li>
+            <li>Focus more on the implications of changing circumstances for multiple benefits such as the impact of changing circumstances on other benefits (and how to communicate this to the customer); </li>
+            <li>Examine the entire journey leading up to the change of circumstances page.</li>
+            <li>Find out if users understand the term 'change of circumstances' and what alternative ways could be used to describe it. Universal Credit for instance is working with a different terminology.  </li>
+            <li>Base the design of all pages including question pages, confirmation pages, support pages and multi-factor authentication pages on standard design system patterns, at least in the first instance. </li>
+            <li>Look to other government and DWP services for good examples to follow where less common design patterns or challenges arise. </li>
+            <li>Ensure that repeated parts of a design (for example, details for how to contact DWP) are positioned consistently so that users know where to find them. </li>
+            <li>Explore the relationship with OneLogin, including how a user can report a change to a piece of data that is held by OneLogin but also appears in DWP services. </li>
+          </ul>
+      
+  </div>
+  </div>
+
+{% endblock %}
