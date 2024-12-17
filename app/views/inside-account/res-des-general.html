@@ -1,0 +1,138 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Design next steps – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        General
+      </h1>
+
+      <p>This page explains research and design that was not specific to a particular page in the concept 1 prototype. </p>
+
+      <h2 class="govuk-heading-m">
+      What was the design intention?
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>The intention behind this concept was to explore what a self-serve account might include for a customer who is receiving multiple DWP benefits. </li>
+        <li>The team worked with the customer view team to learn more about their plans for a new customer interface. The intention is for this concept testing was to support and complement their work. </li>
+       
+       </ul>
+
+      <h2 class="govuk-heading-m">
+      Research questions
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Understand the expectations users have about accessing support. </li>
+        <li>Test the language users expect in relation to accessing support. </li>
+        <li>Explore where in the account users expect to go to for support. </li>
+       
+       </ul>
+
+<p>
+  The research was conducted not with a clickable prototype but with screens on Mural. There is little information about how the research was analysed, as the only available outputs are the <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1710341978981/5bc04c92fcf4a0fb63d087c8d9dbec24ca3f8697" rel="noreferrer noopener" target="_blank">interview notes in Mural</a> (opens in new tab) and the <a href="https://dwpdigital.atlassian.net/wiki/spaces/S2/pages/133651858544/Account+and+tracking+-+user+research+interviews+report" rel="noreferrer noopener" target="_blank">research report in PowerPoint</a> (opens in new tab). To better understand the research that was done, it was decided to reanalyse it in a new consolidated Mural. The following research summary is based on this new analysis (so may be slightly different from the one in the PowerPoint). 
+</p>
+
+<h2 class="govuk-heading-m">
+General limitations</h2>
+
+<h3 class="govuk-heading-s">
+  Design</h3>
+<ul class="govuk-list govuk-list--bullet">
+ <li>The individual screens do not necessarily link to one another to form a clickable journey so should be viewed as standalone.  </li>
+ <li>The design system was not followed in all places. Designs were originally created (and tested) as wireframes in Mural and have since been recreated in the prototype kit. However, it wasn’t possible to recreate some of the designs from Mural in the prototype kit using standard Design System components and so there are some differences between the screens shown here and screens users saw. These are flagged in the page-by-page analysis. </li>
+ <li>The design doesn’t explore the relationship with OneLogin.  </li>
+
+</ul>
+
+<h3 class="govuk-heading-s">
+  Research</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Confusion in the journey: The research may have confused participants because the screens and information shown and tested isn't a coherent journey: 
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Incoherence: The first screen showed one benefit application, but later stages suggested multiple applications were in progress. On some screens, the underlying persona appeared to already receive maternity leave and Disability Living Allowance Child (DLAC), while on others they were still applying for them.  </li>
+        <li>Unrealistic scenarios: The combination of benefits being applied for (e.g. PIP and Maternity Allowance) seemed unrealistic at first glance. </li>
+      </ul>
+    </li>
+      <li>Confusing application widget: The application widget is designed for a single benefit, but participants were shown scenarios involving multiple benefits. 
+        <ul class="govuk-list govuk-list--bullet">
+          <li>To improve future research, the journey should be tested as a consistent flow, and the benefits displayed should align with participants’ actual experiences with individual benefits. 
+          </li>
+        </ul>
+        </li>
+   </ul>
+
+   <h2 class="govuk-heading-m">
+    Next steps</h2>
+
+    <p>
+      An in-depth analysis needs to be done to identify general user needs and those for single components. 
+    </p>
+    <h3 class="govuk-heading-s">
+      Identify and work with user needs</h3>
+<p>We couldn't find evidence that sufficient (desk) research was conducted to support the current designs (this needs to be verified). Therefore, the journey should not be iterated yet; first some background and desk research should be conducted as follows.</p>
+
+      <h3 class="govuk-heading-s">
+      Further desk research</h3>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Tracking: 
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Further designs ideation for tracking multiple benefit applications </li>
+            <li>How applications are tracked within other DWP products. Existing designs, having been thoroughly tested, should feed into the thinking of the basis for any new designs.</li>
+            <li>How multiple items are tracked on designs outside of DWP.</li>
+            <li>Current behaviour of people tracking their benefit applications.</li>
+            <li>Better understand the behaviour of people on multiple benefits when tracking their applications, for instance why users track their applications, how often they track applications, and so on. Research with agents and their databases may be a good starting point.</li>
+            <li>Use the research findings to inform which 'steps' should appear on the progress timeline.</li>
+            <li>Use the research findings to inform updated designs that should be tested, first as concepts and second as flows.</li>
+          </ul>
+        </li>
+
+          <li>Accounts: 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Carry out desk research into other 'accounts' that exist in DWP and across government that the users may be familiar with. 
+              </li>
+              <li>Explore how we can best show payment information to users (and align the information to what arrives in their bank account).  
+              </li>
+            </li>
+       </ul>
+      </ul>
+      </ul>
+
+
+      <h2 class="govuk-heading-m">
+      Understand how this account sits alongside other government and DWP accounts and identities 
+</h2>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Understand how the OneLogin header aligns to the DWP header. </li>
+<li>Understand how the OneLogin account aligns to this account.</li> 
+<li>Explore options for how we reassure the user about where they are.  </li>
+</ul>
+        <h2 class="govuk-heading-m">
+          Information hierarchy</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Ensure the top priority information is on each screen and aligns to the top priority user needs. </li>
+            <li>Ensure the information hierarchy is clear on each screen. </li>
+            <li>Ensure the information is laid out in the most intuitive way. </li>
+            </ul>
+          <h2 class="govuk-heading-m">
+            Inclusive design </h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Explore how we can make numeric content work for users who struggle to understand numbers (e.g. users with dyscalculia), as well as work for users who struggle to read and may have dyslexia. </li>
+              </ul>
+  </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Design next steps – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Account home page
+      </h1>
+
+      <p>This page explains research and design specific to the <a href="home">Account home page</a>. </p>
+
+      <h2 class="govuk-heading-m">
+      What was the design intention?
+      </h2>
+      <p>We wanted to concept test the features and functionality of the application tracking, checking payments and providing an update (change of circumstances) parts of the end-to-end journey from the future state service blueprint. They needed a context for us to explore them so we wireframed what a customer might see once they've logged in. </p>
+
+      <h2 class="govuk-heading-m">
+      Did we test it?</h2>
+      <p>This page was tested with around 18 users in round 2 and round 3 of research. </p>
+
+     <h2 class="govuk-heading-m">
+      Design changes from the tested version visible in this prototype</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Minor changes in font size to make the content hierarchy clearer. </li>
+        <li>Minor changes to bring content into line with the GDS style guide (e.g. capitalisation). </li>
+        <li>Top horizontal navigation header uses the new GDS Design System grey <a href="https://design-system.service.gov.uk/components/service-navigation/" rel="noreferrer noopener" target="_blank">service navigation component</a> (opens in new tab), which is a new component published in summer 2024 after the research took place instead of the header used in the Mural designs, which is not part of the Design System.</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+      Detailed research summary</h2>
+      <p>Participants found the page straightforward and concise in terms of both content and design. </p>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li>This new version was preferred by some users familiar with the current application process.
+          <ul class="govuk-list govuk-list--bullet">
+            <li> One participant liked that the page felt personalised because of the name that was displayed. </li>
+          </ul>
+        </li>
+        <li>The 'Your Application' section was the most frequently mentioned section and generally well-liked. 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Participants appreciated its ability to show where they were in the in the application process (timeline displayed). 
+              </li>
+              <li>Pain points: 
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Some users didn’t understand whether the widget would refer to one or multiple benefits. </li>
+                <li>One person thought the application status would appear at the top of the page. </li>
+                </ul>
+              </li>
+        </li>
+        <li>The 'Upcoming Payments' section was mentioned frequently as well.
+          <ul class="govuk-list govuk-list--bullet">
+            <li>This section helped some participants understand what payments to expect and 'to budget'. </li>
+            <li>Participants usually use the 'View your benefit payments' link or the menu bar to check payments. </li>
+          </ul>
+        </li>
+        <li>General pain points:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Confusion about why payments take 7 days to appear. </li>
+            <li>Font design concerns (see board). </li>
+            <li>Missing option to apply for other benefits. </li>
+            <li>Missing log in/log out option. </li>
+
+          </ul>
+        </li>
+       </ul>
+      
+      
+      <h2 class="govuk-heading-m">
+      Considerations for further research and design work</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Explore how we can allow a user to track multiple applications and can create a consistent experience across pages and benefits. Consider user needs for wanting to see where they are in the application process.  </li>
+        <li>Ensure any design for progress tracking meets design guidelines. </li>
+        <li>Understand what communication users currently receive in relation to their benefit payments (letters, text messages, emails and so on). </li>
+        <li>Review the pain points and address them when designing similar pages.  </li>
+       </ul>
+
+
+  </div>
+  </div>
+
+{% endblock %}

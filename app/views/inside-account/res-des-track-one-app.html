@@ -1,0 +1,101 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Design next steps – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Track one application page
+      </h1>
+
+      <p>This page explains research and design specific to page where a user can <a href="application-submitted.html">track a single benefit applcation</a>. </p>
+
+      <h2 class="govuk-heading-m">
+      What was the design intention?
+      </h2>
+      <p>We know that chasing progress is an area of particular frustration for our users, and it is reflected in the high number of calls to DWP across our benefit lines. This also places a heavy burden on DWP support channels, especially service centres operating phone lines. This concept aims to reduce the frustration experienced by users, help our staff trying to support them, and reduce the volume of inbound calls to our service centres. </p>
+      <h2 class="govuk-heading-m">
+      Did we test it?</h2>
+      <p>This page was tested with around 18 users in round 2 and round 3 of research. Given that the testing was conducted with Mural, several different screens were shown as the accordion was not functional.  </p>
+
+     <h2 class="govuk-heading-m">
+      Design changes from the tested version visible in this prototype</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Change of page heading to reference the application number and make it unique. </li>
+        <li>No colour included as part of the step by step pattern (the guidance in the Design System specifies that designers should not customise this pattern and the default component does not include colour). </li>
+        <li>Minor changes in font size to make the content hierarchy clearer. </li>
+        <li>Minor changes to bring content into line with the GDS style guide (e.g. capitalisation). </li>
+        <li>Top horizontal navigation header uses the new GDS Design System grey <a href="https://design-system.service.gov.uk/components/service-navigation/" rel="noreferrer noopener" target="_blank">service navigation component</a> (opens in new tab), which is a new component published in summer 2024 after the research took place instead of the header used in the Mural designs, which is not part of the Design System.</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+      Detailed research summary</h2>
+     
+      <h3 class="govuk-heading-s">
+        Page where only the tracking flow was shown; not the need to provide evidence </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Usually, participants were very positive about this page and particularly highlighted the step-by-step timeline: 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Several participants mentioned that this felt familiar to other digital platforms they use such as Amazon or tracking a parcel.</li>
+              <li>The page was described as 'straightforward' and 'clear'.</li>
+            </ul>
+        </li>
+        <li>Pain points:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Some participants missed an 'estimated decision date'. </li>
+            <li>One asked how to edit/modify their application.</li>
+            <li>One thought the timeline displayed was not aligned with the previous progress bar and found this inconsistent.</li>
+            <li>One was interested in getting a better understanding of who is working on their case from DWP's side.</li>
+          </ul>
+      </li>
+       </ul>
+       <h3 class="govuk-heading-s">
+        Page that shows the evidence required section at the end of the tracking flow </h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Participants generally understood that they needed to provide evidence on this page. </li>
+          <li>Positive points mentioned:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>The red color of the evidence section highlighted that action was required.  </li>
+              <li>It reminded participants of other online timelines. </li>
+              <li>They appreciated being able to submit evidence online instead of by post. </li>
+              <li>Most participants felt comfortable submitting their passport because they trusted the government website. </li>
+            </ul>
+          </li>
+          <li>Pain points:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Uploading passports: Some participants felt uncertain about uploading their passport and wanted more detailed instructions. </li>
+              <li>Alternative evidence: A few thought that offering only a passport as evidence was insufficient, as not everyone has one. </li>
+              <li>Decision section: Some felt that having a 'show' button under the decision section didn't make sense since no decision had been made yet. </li>
+              <li>Tone and language: One participant felt the language was not friendly enough, noting the absence of polite words like 'please' and 'thank you'. </li>
+            </ul>
+          </li>
+        </ul>
+      <h2 class="govuk-heading-m">
+      Considerations for further research and design work</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>More research must go into understanding how and why users track applications and whether there are specific needs for people receiving multiple benefits.   </li>
+        <li>Investigate whether providing an 'estimated decision date' is feasible from the business side. If it is, add a date. Otherwise give a rough timeframe of 'X days' or 'X weeks'. </li>
+        <li>Investigate whether the application can be modified and if so, add that option. If it cannot be modified, make this clear at the stage where people apply for a benefit.  </li>
+        <li>Review the design choice of using the step-by-step navigation pattern in this context. The Design System guidance specifies that the step-by-step should not be used 'inside a transactional service - use the <a href="https://design-system.service.gov.uk/patterns/complete-multiple-tasks/" rel="noreferrer noopener" target="_blank">Complete multiple tasks pattern</a> (opens in new tab) instead.'  </li> 
+        <li>Check how the timeline can be better aligned with the progress bar. </li>
+        <li>Review the pain points and address them when designing similar pages.  </li>
+    </ul>
+
+
+  </div>
+  </div>
+
+{% endblock %}
