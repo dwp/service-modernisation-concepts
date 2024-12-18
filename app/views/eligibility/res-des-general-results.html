@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Design next steps – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Results page
+      </h1>
+
+      <p>This page explains research and design comments for the Results page that suggests recommendations after a customer completes eligibility to benefit questions. The example designs are listed below.</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="design-a-pensioner">Design A (a user claiming the State Pension)</a></li>
+        <li><a href="design-b-pensioner">Design B (a user claiming the State Pension)</a></li>
+        <li><a href="design-b-child">Design B (a user who is pregnant and has a disabled child)</a></li>
+
+        </ul>
+      <h2 class="govuk-heading-m">
+      What was the design intention?
+      </h2>
+      <p>[Add text]</p>
+
+      <h2 class="govuk-heading-m">
+        Did we test it?</h2>
+        <p>The pages were tested with 10 users in round 1 of research. 
+ </p>
+
+      <h2 class="govuk-heading-m">
+        Detailed research summary 
+            </h2>
+       
+        <h3 class="govuk-heading-s">Key findings</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Some participants assumed that they were eligible for the benefits shown which is not true as they only <strong>might</strong> be eligible. </li>
+            <li>The next iteration should work with updated content that clearly explains customers are not automatically eligible for the benefits shown and is better at managing expectations. </li>
+            <li>Participants generally preferred seeing information about each benefit upfront (Design B) rather than opening an accordion to find more details (as in Design A).  </li>
+            <li>Further testing should explore including more than two benefits on the wireframe. If there are more, an accordion feature might be necessary. </li>
+            <li>The font in Design B was considered as too small by several participants. (Note however that in reseach users were shown Mural screens rather than the screens shown in this prototype, where the font size is standard and larger.) </li>
+            <li>One participant noted that the payout times seemed unrealistic.  </li>
+            <li>This should be investigated to confirm if the timelines are accurate and whether this is the right place in the journey to display them. At this point, customers don't yet know if they're eligible so talking about payout times feels premature. </li>
+         </ul>
+
+
+   <h2 class="govuk-heading-m">
+   General limitations</h2>
+   <ul class="govuk-list govuk-list--bullet">
+    <li>From reviewing the journey, it doesn't appear that much thought went into the sequencing of questions. As an example: Why was the question which benefits participants receiving not asked at the beginning of the journey or why was no option given to select 'I don’t know' to that question? It is therefore unclear whether an actual logical journey was tested with participants.  </li>
+     </ul>
+
+   <h2 class="govuk-heading-m">
+    Next steps</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><strong>Start with desk research and established eligibility journeys.</strong> It is unclear whether research from other benefits that already have a digital eligibility process was considered for the journey or the wireframes. Before further research is conducted, there should be first desk research around eligibility journeys of already well-established digital products. Products to consider should include Universal Credit and Customer View as well as non-governmental websites that are popular with customers.  </li>
+      <li>It is also unclear whether much thought was given to the sequencing of eligibility questions, and which benefits the eligibility questions are covering. This should be checked by BAs before research is being picked up. The original UR from this round of research reveals that users often were confused. </li>
+      <li><strong>Test with participants on multiple benefits.</strong> From the research notes it is unclear whether the recruited participants were on multiple benefits. While some certainly had applied for several benefits in the past, it was not clear whether they received them simultaneously. Speaking with people who have definitely received and claimed multiple benefits at the same time would provide better insights. Prototype should consider these specific benefits. </li>
+      <li>Interviews could explore in greater depth how participants specifically experienced the process of applying for multiple benefits and identify their biggest pain points. </li>
+      <li>Test content and design separately on the results pages. The 'A/B testing' appeared to test both design and content simultaneously, with very little difference between design/content. This likely confused participants. When discussing which versions they preferred, participants usually focussed solely on the designs, suggesting they didn't notice the contents differences. Future research should separate design and content testing to avoid this confusion. </li>
+      <li>Ensure that it is clear on the page what the choices are for the customer. </li>
+      <li>Ensure that the design doesn't veer away from standard design system patterns without clear research to show the need for this. </li>
+      <li>Ensure font sizes follow design system guidance and test with users. </li>
+    </ul>
+      
+  </div>
+  </div>
+
+{% endblock %}

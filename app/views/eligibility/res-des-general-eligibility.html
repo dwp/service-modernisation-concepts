@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Design next steps – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        General
+      </h1>
+
+      <p>This page explains general research and design comments for the concept of giving users suggested recommendations after completing eligibility to benefit questions. The eligibility questions are not included in this prototype; it only includes the suggested recommendations page.  </p>
+
+      <h2 class="govuk-heading-m">
+      What was the design intention?
+      </h2>
+      <p>[Add text]</p>
+
+      <h2 class="govuk-heading-m">
+        Design changes from the tested version visible in this prototype</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Minor changes in font size to make the content hierarchy clearer. </li>
+          <li>Minor changes to bring content into line with the GDS style guide (e.g. capitalisation). </li>
+          <li>Top horizontal navigation header uses the new GDS Design System grey <a href="https://design-system.service.gov.uk/components/service-navigation/" rel="noreferrer noopener" target="_blank">service navigation component</a> (opens in new tab), which is a new component published in summer 2024 after the research took place instead of the header used in the Mural designs, which is not part of the Design System.</li>
+        </ul>
+
+      <h2 class="govuk-heading-m">
+        Did we test it?</h2>
+        <p>The pages were tested with 10 users in round 1 of research. The <a href="https://dwpdigital.atlassian.net/wiki/spaces/S2/pages/133618107490/UR+interviews+round+1+-+Discovery+awareness+eligibility+flow+and+tracking+flow"  target="blank">original research report</a> lives here. 
+ </p>
+ <p>
+          It was decided to only revisit the research for the result page ('A/B testing'). In case other pages of this prototype are revisited, relying on the research report is likely not sufficient.  </p>
+  
+      <h2 class="govuk-heading-m">
+      Research questions
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>What lead participants to seek financial support? (Not part of prototype) </li>
+        <li>How did they discover what benefits they may be eligible for? (Not part of prototype) </li>
+        <li>Was there anything holding them back from seeking financial support or benefits? (Not part of prototype) </li>
+        <li>How could the DWP make it easier for them to find the information they need? (Not part of prototype) </li>
+        <li>How did applicants experience the process of applying for benefits?  </li>
+        <li>What do participants think about the digital eligibility journey? </li>
+        <li>What do participants think about the screens that track applications? </li>
+      </ul>
+
+
+   <h2 class="govuk-heading-m">
+   General limitations</h2>
+   <ul class="govuk-list govuk-list--bullet">
+    <li>From reviewing the journey, it doesn't appear that much thought went into the sequencing of questions. As an example: Why was the question which benefits participants receiving not asked at the beginning of the journey or why was no option given to select 'I don’t know' to that question? It is therefore unclear whether an actual logical journey was tested with participants.  </li>
+    <li>The design system was not followed in all places. </li>
+  </ul>
+
+   <h2 class="govuk-heading-m">
+    Next steps</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><strong>Start with desk research and established eligibility journeys.</strong> It is unclear whether research from other benefits that already have a digital eligibility process was considered for the journey or the wireframes. Before further research is conducted, there should be first desk research around eligibility journeys of already well-established digital products. Products to consider should include Universal Credit and Customer View as well as non-governmental websites that are popular with customers.  </li>
+      <li>It is also unclear whether much thought was given to the sequencing of eligibility questions, and which benefits the eligibility questions are covering. This should be checked by business analysts before research is being picked up. The original researcher from this round of research reveals that users often were confused. </li>
+      <li><strong>Test with participants on multiple benefits.</strong> From the research notes it is unclear whether the recruited participants were on multiple benefits. While some certainly had applied for several benefits in the past, it was not clear whether they received them simultaneously. Speaking with people who have definitely received and claimed multiple benefits at the same time would provide better insights. The prototype should consider these specific benefits. </li>
+      <li>Interviews could explore in greater depth how participants specifically experienced the process of applying for multiple benefits and identify their biggest pain points. </li>
+      <li>Test content and design separately on the results pages. The 'A/B testing' appeared to test both design and content simultaneously, with very little difference between design/content. This likely confused participants. When discussing which versions they preferred, participants usually focused solely on the designs, suggesting they didn't notice the content differences. Future research should separate design and content testing to avoid this confusion. </li>
+      <li>Review whether a confirmation page is the best point at which to display recommendations. A confirmation page usually marks the final point in a journey rather than introducing new content.</li>
+       </ul>
+      
+  </div>
+  </div>
+
+{% endblock %}
