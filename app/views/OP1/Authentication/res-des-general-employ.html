@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Design next steps – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        General
+      </h1>
+
+      <p>This page explains general research and design comments for the change employment status. This journey is very similar to the design of the <a href="change-bank-details.html">Change bank details</a> journey and these journeys were tested together. As the design and research analysis is so similar, we have not duplicated commentary here for each page but have provided general comments only.</p>
+
+      <h2 class="govuk-heading-m">
+      What was the design intention?
+      </h2>
+      <p>[Add intention]</p>
+
+      <h2 class="govuk-heading-m">
+      Research questions
+      </h2>
+      <p>Decided against reanalysing the data as it is very likely that this journey already exists elsewhere and are not specific to multiple benefits. If this is not the case yet, it should be worked with wireframes that were already tested and used – for instance in UC or other benefits where people change their employment status. </p>
+
+
+      <h2 class="govuk-heading-m">
+        Did we test it?</h2>
+        <p>This page was tested with 10 users in round 3 of research. </p>
+  
+       <h2 class="govuk-heading-m">
+        Design changes from the tested version visible in this prototype</h2>
+        <p>The screens in this prototype are very similar to the Mural screens they were recreated from. There are some minor differences, detailed below. </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Minor changes in font size to make the content hierarchy clearer. </li>
+          <li>Minor changes to bring content into line with the GDS style guide (e.g. capitalisation). </li>
+          <li>Top horizontal navigation header uses the new GDS Design System grey <a href="https://design-system.service.gov.uk/components/service-navigation/" rel="noreferrer noopener" target="_blank">service navigation component</a> (opens in new tab), which is a new component published in summer 2024 after the research took place instead of the header used in the Mural designs, which is not part of the Design System.</li>
+        </ul>
+
+<h2 class="govuk-heading-m">
+General limitations</h2>
+
+<ul class="govuk-list govuk-list--bullet">
+ <li>None of the change of circumstances journeys tested were specific to a journey with multiple benefits, nor did they address particular challenges that could arise when combining multiple benefits in a change of circumstances flow.  </li>
+
+</ul>
+
+   <h2 class="govuk-heading-m">
+    Next steps</h2>
+
+    
+
+      <ul class="govuk-list govuk-list--bullet">
+            <li>Research should focus on journeys that incorporate criteria from multiple benefit lines and realistic scenarios for how multiple benefit payments could change as a consequence of reporting a change.  </li>
+          </ul>
+      
+  </div>
+  </div>
+
+{% endblock %}
