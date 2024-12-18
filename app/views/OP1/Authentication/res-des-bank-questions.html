@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Design next steps – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Change of bank details questions pages </h1>
+
+      <p>This page explains research and design specific to the following set of pages:</p>
+      <ul class="govuk-list govuk-list">
+        <li>Change of bank details pages: 
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+          <a href="/OP1/Questions/bank-change">Before you change your bank details</a></li>
+          <li><a href="/OP1/Questions/bank-existing">Your existing bank details</a></li>
+          <li><a href="/OP1/Questions/bank-enter-details">Enter your bank details</a></li>
+          <li><a href="/OP1/Questions/bank-check">Check your bank details</a></li>
+        </ul>
+        </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+      What was the design intention?
+      </h2>
+      <p>[Add text] </p>
+
+      <h2 class="govuk-heading-m">
+      Did we test it?</h2>
+      <p>These pages were tested with 10 users in round 3 of research. </p>
+
+    
+
+      <h2 class="govuk-heading-m">
+      Detailed research summary</h2>
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Decided against reanalysing the data as it is very likely that this journey already exists elsewhere and are not specific to multiple benefits. If this has not happened yet, it should be worked with wireframes that were already tested and used – for instance in Universal Credit or other benefits where people change their bank details </li>
+        
+      </ul>
+      
+      
+      <h2 class="govuk-heading-m">
+      Considerations for further research and design work</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Carry out further research to understand where best to offer further support within the interface, for example, to talk to an advisor. </li>
+        <li>Explore options for using information we already have as DWP about the customer's payment schedule to warn them about the money potentially entering the wrong bank account if they change their bank details just before a payment is due. </li>
+        <li>Where the user is asked to enter bank details, make it clearer that this is entering the new bank details. </li>
+        <li>Explore how to help the customer when entering bank details, for example whether hyphens can appear automatically when they enter the sort code. </li>
+        <li>Provide further guidance to help users, for example, explain what format a roll number would be in. </li>
+        <li>Check standard patterns for the check answers pages and ensure there is only one key action per page. </li>
+        <li>Explore how we can make numeric content work for users who struggle to understand numbers (e.g. users with dyscalculia), as well as work for users who struggle to read and may have dyslexia. </li>
+       </ul>
+  </div>
+  </div>
+
+{% endblock %}
