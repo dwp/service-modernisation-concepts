@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Design next steps – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        General
+      </h1>
+
+      <p>This page explains general research and design comments for the <a href="/OP1/my-account/summary">Change caring status journey</a>. </p>
+
+      <h2 class="govuk-heading-m">
+      What was the design intention?
+      </h2>
+      <p>[Add intention]</p>
+
+      <h2 class="govuk-heading-m">
+      Research questions
+      </h2>
+      <p>This journey was not tested with participants. </p>
+
+     
+       <h2 class="govuk-heading-m">
+        Design of this prototype</h2>
+        <p>This prototype was not recreated from a Mural wireframe in December 2024 (as all other journeys were) but was built into the prototype in summer 2024. </p>
+       
+
+<h2 class="govuk-heading-m">
+General limitations</h2>
+
+<ul class="govuk-list govuk-list--bullet">
+ <li>This journey was not tested with participants. </li>
+<li>The journey is most likely not displaying accurate questions for the benefits. </li>
+</ul>
+
+   <h2 class="govuk-heading-m">
+    Next steps</h2>
+
+    
+
+      <ul class="govuk-list govuk-list--bullet">
+          <li>Identify user needs of people reporting breaks in care. Work with other teams – The Carer’s Allowance team is currently conducting research on breaks in care.  </li>
+          <li>Base the questions asked on signed off decision trees to incorporate them in the user journey. </li>
+          <li>Explore opportunities to avoid the customer having to manually enter data, for example by including an address picker or by pulling data that DWP already has access to. </li>
+          </ul>
+      
+  </div>
+  </div>
+
+{% endblock %}
